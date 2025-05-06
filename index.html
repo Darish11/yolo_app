@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>Traffic Analytics</title>
+</head>
+<body>
+  <h1>Traffic Analytics Dashboard</h1>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label>Upload video:</label>
+    <input type="file" name="video">
+    <button type="submit">Start</button>
+  </form>
+
+  <button onclick="window.location='/stats'">View Stats</button>
+  <h2>Live Feed</h2>
+  <img src="{{ url_for('video_feed') }}" style="width:100%; max-width:1280px;">
+</body>
+</html>
